@@ -1,0 +1,6 @@
+# roles/netplan-config/handlers/main.yml
+---
+- name: restart network
+  become: yes
+  command: netplan apply
+

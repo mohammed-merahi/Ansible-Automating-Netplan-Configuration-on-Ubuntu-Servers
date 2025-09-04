@@ -1,0 +1,13 @@
+---
+- name: Deploy netplan configuration
+  template:
+    src: netplan.yaml.j2
+    dest: /etc/netplan/01-ansible-config.yaml
+    owner: mrh01
+    group: mrh01
+    mode: '0644'
+
+- name: Apply netplan
+  command: netplan apply
+  notify: restart network
+

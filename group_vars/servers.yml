@@ -1,0 +1,9 @@
+interface_name: ens33
+dhcp4: false
+addresses:
+  - "192.168.93.17/24"
+gateway4: "192.168.93.2"
+nameservers:
+  - "8.8.8.8"
+  - "8.8.4.4"
+

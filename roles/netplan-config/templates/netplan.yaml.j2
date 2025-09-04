@@ -1,0 +1,11 @@
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    {{ interface_name }}:
+      dhcp4: {{ dhcp4 | default(false) }}
+      addresses: {{ addresses | default([]) }}
+      gateway4: {{ gateway4 | default('') }}
+      nameservers:
+        addresses: {{ nameservers | default([]) }}
+
